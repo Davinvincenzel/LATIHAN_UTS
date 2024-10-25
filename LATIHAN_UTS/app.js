@@ -8,6 +8,8 @@ require('./models/db');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var produkRouter = require('./routes/produks');
+var kategoriRouter = require('./routes/kategoris');
+var transaksiRouter = require('./routes/transaksis');
 var app = express();
 
 // view engine setup
@@ -23,6 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/produk', produkRouter);
+app.use('/kategori', kategoriRouter);
+app.use('/transaksi', transaksiRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

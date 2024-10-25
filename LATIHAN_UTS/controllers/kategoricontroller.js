@@ -19,6 +19,7 @@ exports.insert = async (req, res) => {
     created_at: new Date(),
     updated_at: new Date(),
     status: true
+
   });
 
   try {

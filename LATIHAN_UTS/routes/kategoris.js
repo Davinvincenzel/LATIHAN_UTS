@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-const mahasiswaController = require('../controllers/kategoricontroller');
+const kategoriController = require('../controllers/kategoricontroller');
 
-router.get("/", kategoricontroller.index); 
-router.post("/insert", kategoricontroller.insert);
+router.get("/", kategoriController.index); 
+router.post("/insert", kategoriController.insert);
 
 module.exports = router;
